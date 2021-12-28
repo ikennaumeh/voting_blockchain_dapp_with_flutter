@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:voting_blockchain_flutter_app/migration.dart';
-import 'package:http/http.dart';
-import 'package:web3dart/web3dart.dart';
-void main() {
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+
+import 'home_screen.dart';
+void main() async {
+  await dotenv.load();
   runApp(const MyApp());
 }
 
@@ -17,32 +18,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(),
+      home: const HomeScreen(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key}) : super(key: key);
-
-
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-
-  @override
-  void initState() {
-    httpClient = Client();
-    ethClient = Web3Client(blockchainUrl, httpClient);
-    //getTotalVotes();
-    super.initState();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold();
-  }
-}
