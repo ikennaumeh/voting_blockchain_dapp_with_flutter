@@ -76,7 +76,7 @@ class _HomeScreenState extends State<HomeScreen> {
     snackBar(label: "Recording votes");
     //obtain private key for write operation
     Credentials key = EthPrivateKey.fromHex(
-        "${dotenv.env['privateKey']}");
+        "07ba5051f72fb4f7b6ccf9e289279fce427e4e5b65736382459a776bcb2128a0");
 
     //obtain our contract from abi in json file
     final contract = await getContract();
