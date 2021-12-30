@@ -37,6 +37,7 @@ dependencies:
   web3dart: ^2.3.3
   http: ^0.13.4
   flutter_dotenv: ^5.0.2
+  firebase_remote_config: ^1.0.3
 
 dev_dependencies:
   flutter_test:
